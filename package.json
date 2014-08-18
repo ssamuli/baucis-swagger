@@ -30,11 +30,10 @@
   "license": "MIT",
   "dependencies": {
     "deco": "~0.10.2",
-    "baucis": "^0.20.5"
   },
   "peerDependencies": {
     "mongoose": "~3.8.8",
-    "baucis": ">=0.20.0"
+    "baucis": "^0.20.5"
   },
   "devDependencies": {
     "mocha": "~1.8.2",
@@ -42,7 +41,7 @@
     "request": "~2.21.0",
     "mongoose": "~3.8.8",
     "express": "~3.5.1",
-    "baucis": ">=0.20.0",
+    "baucis": "^0.20.5",
     "async": "~0.2.9"
   },
   "keywords": [
