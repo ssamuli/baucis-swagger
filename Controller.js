@@ -16,9 +16,9 @@ function swaggerTypeFor (type) {
   if (type === mongoose.Schema.Types.Oid) return 'string';
   if (type === mongoose.Schema.Types.Array) return 'Array';
   if (Array.isArray(type) || type.name === "Array") return 'Array';
+  if (type === mongoose.Schema.Types.Mixed) return 'string';
   if (type === Object) return null;
   if (type instanceof Object) return null;
-  if (type === mongoose.Schema.Types.Mixed) return null;
   if (type === mongoose.Schema.Types.Buffer) return null;
   throw new Error('Unrecognized type: ' + type);
 }
