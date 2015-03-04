@@ -16,22 +16,22 @@ var Vegetable = new Schema({
   species: { type: String, default: 'n/a', select: false },
   related: { type: Schema.ObjectId, ref: 'vegetable' }
 });
-var Fungus = new Schema({ 
+var Fungus = new Schema({
   dork: {type: Boolean, default: true },
   'hyphenated-field-name': { type: String, default: 'blee' },
   password: {type: String, default: '123' }
 });
-var Stuffing = new Schema({ 
+var Stuffing = new Schema({
   bread: {type: Boolean, default: true }
 });
-var Goose = new Schema({ 
+var Goose = new Schema({
   cooked: {type: Boolean, default: true },
   stuffed: [Stuffing]
 });
 
 mongoose.model('vegetable', Vegetable);
-mongoose.model('fungus', Fungus);
-mongoose.model('goose', Goose);
+mongoose.model('fungus', Fungus).plural('fungi');
+mongoose.model('goose', Goose).plural('geese');
 
 // __Module Definition__
 var fixture = module.exports = {
@@ -42,8 +42,8 @@ var fixture = module.exports = {
     fixture.controller.generateSwagger();
     fixture.controller.swagger.lambic = 'kriek';
 
-    baucis.rest('fungus').plural('fungi').select('-hyphenated-field-name -password');
-    baucis.rest('goose').plural('geese');
+    baucis.rest('fungus').select('-hyphenated-field-name -password');
+    baucis.rest('goose');
 
     app = express();
     app.use('/api', baucis());
