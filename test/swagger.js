@@ -160,4 +160,7 @@ describe('Swagger Resource Listing', function () {
   it('should generate embedded models correctly');
   it('should keep paths deselected in the schema private');
   it('should keep paths deselected in the controller private');
+
+  it('recognizes Mongo array type');
+  it('adds virtuals as model properties');
 });
