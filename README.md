@@ -18,7 +18,7 @@ It is very easy to use.  Include the package after baucis is included, and befor
     baucis.rest('vegetable');
     app.use('/api', baucis());
 
-Then, access e.g. `GET http://localhost:3333/api/api-docs`.  See the [Baucis](https://github.com/wprl/baucis) repo for more information about building REST APIs with [Baucis](https://github.com/wprl/baucis).
+Then, access e.g. `GET http://localhost:3333/api/documentation`.  See the [Baucis](https://github.com/wprl/baucis) repo for more information about building REST APIs with [Baucis](https://github.com/wprl/baucis).
 
 Contact
 -------
