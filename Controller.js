@@ -80,7 +80,7 @@ var decorator = module.exports = function () {
 
     if (!property.type) {
       console.log('Warning: That field type is not yet supported in baucis Swagger definitions, using "string."');
-      console.log('Path name: %s.%s', definition.id, name);
+      console.log('Path name: %s.%s', controller.model().plural(), name);
       console.log('Mongoose type: %s', path.options.type);
       property.type = 'string';
     }
