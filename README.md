@@ -20,6 +20,13 @@ It is very easy to use.  Include the package after baucis is included, and befor
 
 Then, access e.g. `GET http://localhost:3333/api/documentation`.  See the [Baucis](https://github.com/wprl/baucis) repo for more information about building REST APIs with [Baucis](https://github.com/wprl/baucis).
 
+If you want to modify the swagger definition, generate the definition first.  (This will happen automatically otherwise.)
+
+```javascript
+controller.generateSwagger();
+controller.swagger.xyz = '123';
+```
+
 Contact
 -------
 

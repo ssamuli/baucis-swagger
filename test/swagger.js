@@ -161,6 +161,7 @@ describe('Swagger Resource Listing', function () {
   it('should keep paths deselected in the schema private');
   it('should keep paths deselected in the controller private');
 
+  it('does not crash when a Mixed type is used');
   it('recognizes Mongo array type');
   it('adds virtuals as model properties');
 });
