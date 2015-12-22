@@ -128,7 +128,7 @@ var decorator = module.exports = function () {
 
       parameters.push({
         paramType: 'header',
-        name: 'X-Baucis-Update-Operator',
+        name: 'Update-Operator',
         description: '**BYPASSES VALIDATION** May be used with PUT to update the document using $push, $pull, or $set.',
         dataType: 'string',
         required: false,
